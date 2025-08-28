@@ -1,0 +1,140 @@
+[
+  {
+    "id": "proj-001",
+    "title": "Oceanview Residences",
+    "description": "A luxury residential development featuring 24 oceanfront condominiums with world-class amenities. This project transformed an underutilized beachfront property into a premier residential destination, incorporating sustainable design principles and hurricane-resistant construction.",
+    "location": "Vero Beach, FL",
+    "projectType": "Residential Development",
+    "status": "Completed",
+    "images": [
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&h=600&fit=crop"
+    ],
+    "metrics": {
+      "units": 24,
+      "totalSqft": 72000,
+      "priceRange": "$1.2M - $3.5M",
+      "constructionTime": "18 months",
+      "occupancyRate": "100%"
+    },
+    "communityImpact": "Created 150 construction jobs during development and added $84 million in property value to the local tax base. The project also included public beach access improvements and dune restoration.",
+    "testimonial": "Atlante's expertise in navigating complex coastal regulations and their commitment to quality made this project a tremendous success. Their team delivered on time and exceeded our expectations.",
+    "completionDate": "2023-06-15T00:00:00.000Z",
+    "createdAt": "2021-01-15T00:00:00.000Z"
+  },
+  {
+    "id": "proj-002",
+    "title": "Heritage Commons",
+    "description": "A mixed-use development combining retail, office, and residential spaces in the heart of downtown Stuart. This adaptive reuse project preserved historic facades while creating modern, functional spaces that honor the area's architectural heritage.",
+    "location": "Stuart, FL",
+    "projectType": "Mixed-Use Development",
+    "status": "Completed",
+    "images": [
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop"
+    ],
+    "metrics": {
+      "retailSpace": "25,000 sq ft",
+      "officeSpace": "15,000 sq ft",
+      "residentialUnits": 12,
+      "constructionTime": "24 months",
+      "occupancyRate": "95%"
+    },
+    "communityImpact": "Revitalized the downtown core, creating 200 permanent jobs and preserving 3 historic buildings. The project catalyzed additional private investment totaling $15 million in the surrounding area.",
+    "testimonial": "The Heritage Commons project has been transformational for our downtown district. Atlante's vision and execution brought new life to these historic buildings while respecting their character.",
+    "completionDate": "2023-11-30T00:00:00.000Z",
+    "createdAt": "2021-06-01T00:00:00.000Z"
+  },
+  {
+    "id": "proj-003",
+    "title": "Riverside Business Park",
+    "description": "A 50-acre master-planned business park designed to attract technology and professional service companies to the Treasure Coast. The development features state-of-the-art infrastructure, flexible office buildings, and extensive green spaces.",
+    "location": "Port St. Lucie, FL",
+    "projectType": "Commercial Development",
+    "status": "In Progress",
+    "images": [
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&h=600&fit=crop"
+    ],
+    "metrics": {
+      "totalAcreage": 50,
+      "buildingCount": 8,
+      "totalOfficeSpace": "120,000 sq ft",
+      "constructionTime": "36 months",
+      "phaseCompletion": "Phase 1: 75%"
+    },
+    "communityImpact": "Expected to create 800+ high-paying jobs and generate $2.5 million annually in new tax revenue. The project includes workforce training partnerships with local colleges and universities.",
+    "testimonial": "Atlante's comprehensive approach to this project, from initial feasibility through construction management, has been exceptional. They understand both the technical and business aspects of development.",
+    "completionDate": "2025-03-15T00:00:00.000Z",
+    "createdAt": "2022-09-01T00:00:00.000Z"
+  },
+  {
+    "id": "proj-004",
+    "title": "Affordable Housing Initiative",
+    "description": "A community-focused development providing quality affordable housing for working families in Martin County. This project utilized innovative construction methods and sustainable design to deliver homes at below-market rates while maintaining high quality standards.",
+    "location": "Jensen Beach, FL",
+    "projectType": "Affordable Housing",
+    "status": "Completed",
+    "images": [
+      "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=600&fit=crop"
+    ],
+    "metrics": {
+      "affordableUnits": 48,
+      "averagePrice": "$185,000",
+      "incomeQualification": "80% AMI",
+      "constructionTime": "14 months",
+      "familiesServed": 48
+    },
+    "communityImpact": "Provided homeownership opportunities for 48 working families, including teachers, firefighters, and healthcare workers. The project also included financial literacy education and homeownership counseling.",
+    "testimonial": "This project demonstrates that affordable housing can be both high-quality and profitable. Atlante's commitment to the community and attention to detail made all the difference.",
+    "completionDate": "2023-08-20T00:00:00.000Z",
+    "createdAt": "2022-03-15T00:00:00.000Z"
+  },
+  {
+    "id": "proj-005",
+    "title": "Innovation Campus",
+    "description": "A forward-thinking educational and research campus designed to foster innovation and entrepreneurship. This public-private partnership includes classrooms, laboratories, co-working spaces, and business incubators to support emerging technology companies.",
+    "location": "Fort Pierce, FL",
+    "projectType": "Educational/Research",
+    "status": "Planning",
+    "images": [
+      "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1562774053-701939374585?w=800&h=600&fit=crop"
+    ],
+    "metrics": {
+      "totalSpace": "75,000 sq ft",
+      "classrooms": 12,
+      "laboratories": 6,
+      "incubatorSpaces": 20,
+      "projectTimeline": "30 months"
+    },
+    "communityImpact": "Will support workforce development initiatives and attract technology companies to the region. Expected to serve 500+ students annually and support 50+ startup companies in the incubator program.",
+    "testimonial": "We're excited to partner with Atlante on this transformative project that will position our community as a leader in innovation and technology education.",
+    "completionDate": "2026-05-01T00:00:00.000Z",
+    "createdAt": "2024-01-10T00:00:00.000Z"
+  },
+  {
+    "id": "proj-006",
+    "title": "Waterfront Marina Village",
+    "description": "A comprehensive marina and residential development featuring 200 boat slips, waterfront dining, retail shops, and luxury condominiums. This project enhances the boating community while providing world-class amenities for residents and visitors.",
+    "location": "Sebastian, FL",
+    "projectType": "Mixed-Use Marina",
+    "status": "In Progress",
+    "images": [
+      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&h=600&fit=crop",
+      "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&h=600&fit=crop"
+    ],
+    "metrics": {
+      "boatSlips": 200,
+      "residentialUnits": 36,
+      "retailSpace": "8,000 sq ft",
+      "restaurantSpace": "4,000 sq ft",
+      "constructionTime": "28 months"
+    },
+    "communityImpact": "Creates a destination for boating enthusiasts while providing economic benefits through tourism and permanent jobs. The project includes environmental restoration of the waterfront ecosystem.",
+    "testimonial": "Atlante's understanding of marine construction and environmental regulations has been crucial to the success of this complex waterfront project.",
+    "completionDate": "2025-08-15T00:00:00.000Z",
+    "createdAt": "2023-04-01T00:00:00.000Z"
+  }
+]

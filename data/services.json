@@ -1,0 +1,172 @@
+[
+  {
+    "id": "service-001",
+    "category": "Brokerage",
+    "title": "Residential Sales",
+    "description": "Complete residential real estate services for buyers and sellers",
+    "features": [
+      "MLS search and listing services",
+      "Professional photography and marketing",
+      "Comparative market analysis",
+      "Transaction coordination",
+      "Negotiation expertise",
+      "Closing support and guidance"
+    ],
+    "targetAudience": "Homebuyers, sellers, and investors",
+    "pricing": "Competitive commission rates",
+    "isActive": true
+  },
+  {
+    "id": "service-002",
+    "category": "Brokerage", 
+    "title": "Commercial Sales",
+    "description": "Specialized commercial real estate transactions and investments",
+    "features": [
+      "Commercial property analysis",
+      "Investment property evaluation",
+      "Lease negotiation and management",
+      "1031 exchange coordination",
+      "Market research and feasibility studies",
+      "Portfolio management services"
+    ],
+    "targetAudience": "Investors, business owners, and developers",
+    "pricing": "Custom fee structure based on transaction complexity",
+    "isActive": true
+  },
+  {
+    "id": "service-003",
+    "category": "Property Management",
+    "title": "Residential Property Management",
+    "description": "Comprehensive management services for residential rental properties",
+    "features": [
+      "Tenant screening and placement",
+      "Rent collection and accounting",
+      "Maintenance coordination",
+      "Property inspections",
+      "24/7 emergency support",
+      "Monthly financial reporting"
+    ],
+    "targetAudience": "Property owners and real estate investors",
+    "pricing": "8% of monthly rental income",
+    "isActive": true
+  },
+  {
+    "id": "service-004",
+    "category": "Property Management",
+    "title": "Commercial Property Management", 
+    "description": "Professional management for commercial and retail properties",
+    "features": [
+      "Lease administration",
+      "Tenant relations management",
+      "Property maintenance oversight",
+      "Financial reporting and analysis",
+      "Capital improvement planning",
+      "Vendor management and coordination"
+    ],
+    "targetAudience": "Commercial property owners and investors",
+    "pricing": "Custom pricing based on property type and services",
+    "isActive": true
+  },
+  {
+    "id": "service-005",
+    "category": "Real Estate School",
+    "title": "Pre-License Education",
+    "description": "Complete 63-hour pre-license course for new real estate professionals",
+    "features": [
+      "State-approved curriculum",
+      "Online and in-person options",
+      "Expert instruction",
+      "Exam preparation materials",
+      "Study guides and practice tests",
+      "Career guidance and support"
+    ],
+    "targetAudience": "Aspiring real estate professionals",
+    "pricing": "$299 for complete course",
+    "isActive": true
+  },
+  {
+    "id": "service-006",
+    "category": "Real Estate School",
+    "title": "Continuing Education",
+    "description": "Required continuing education courses for license renewal",
+    "features": [
+      "FREC approved courses",
+      "Self-paced online learning",
+      "Mobile-friendly platform",
+      "Instant certificate delivery",
+      "Multiple course options",
+      "Expert instructor support"
+    ],
+    "targetAudience": "Licensed real estate professionals",
+    "pricing": "$149 for 14-hour requirement",
+    "isActive": true
+  },
+  {
+    "id": "service-007",
+    "category": "Development Consulting",
+    "title": "Feasibility Studies",
+    "description": "Comprehensive analysis of development project viability",
+    "features": [
+      "Market demand analysis",
+      "Financial modeling and projections",
+      "Risk assessment and mitigation",
+      "Timeline and budget estimates",
+      "Regulatory compliance review",
+      "Investment return calculations"
+    ],
+    "targetAudience": "Developers, investors, and landowners",
+    "pricing": "Custom pricing based on project scope",
+    "isActive": true
+  },
+  {
+    "id": "service-008",
+    "category": "Development Consulting",
+    "title": "Site Acquisition Services",
+    "description": "Expert guidance for identifying and securing development sites",
+    "features": [
+      "Site identification and screening",
+      "Due diligence coordination",
+      "Zoning and regulatory analysis",
+      "Negotiation and contract support",
+      "Environmental assessment coordination",
+      "Title and survey review"
+    ],
+    "targetAudience": "Developers and commercial investors",
+    "pricing": "Fee-based or success fee structure",
+    "isActive": true
+  },
+  {
+    "id": "service-009",
+    "category": "Development Consulting",
+    "title": "Entitlement and Permitting",
+    "description": "Navigate complex zoning and permitting processes",
+    "features": [
+      "Zoning analysis and applications",
+      "Municipal relations and advocacy",
+      "Permit coordination and tracking",
+      "Public hearing preparation",
+      "Environmental compliance support",
+      "Timeline management and reporting"
+    ],
+    "targetAudience": "Developers and property owners",
+    "pricing": "Hourly rates or project-based fees",
+    "isActive": true
+  },
+  {
+    "id": "service-010",
+    "category": "Development Consulting",
+    "title": "Project Management",
+    "description": "End-to-end oversight of development projects",
+    "features": [
+      "Project planning and scheduling",
+      "Budget management and reporting",
+      "Contractor and vendor coordination",
+      "Quality control and inspections",
+      "Stakeholder communication",
+      "Risk management and problem resolution"
+    ],
+    "targetAudience": "Developers and project owners",
+    "pricing": "Percentage of construction cost or fixed fee",
+    "isActive": true
+  }
+]
