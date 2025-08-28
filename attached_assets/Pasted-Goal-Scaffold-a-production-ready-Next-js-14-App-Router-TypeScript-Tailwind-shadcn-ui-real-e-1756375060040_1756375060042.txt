@@ -1,0 +1,125 @@
+Goal: Scaffold a production-ready Next.js 14 (App Router) + TypeScript + Tailwind + shadcn/ui real-estate website for Atlante that unifies four lines of business and links out where needed. Create clean, mobile-first UI inspired by treasurecoastcommercialrealestate.com (Services depth) and fragaproperties.com (polish + large visuals). Site will embed/ integrate IDXBroker for MLS search & listings.
+
+Tech & libraries
+
+Next.js 14 (App Router), TypeScript, Tailwind CSS, shadcn/ui, Framer Motion, next-seo, react-hook-form + Zod, axios, @vercel/analytics.
+
+Folder layout:
+
+app/(site)/* pages; app/(marketing)/*; app/api/lead/route.ts (POST → CRM webhook).
+
+components/* (Hero, MegaMenu, LeadForm, AgentCard, ListingCard, TestimonialCarousel, StatStrip, FeatureGrid, Footer, CTAButtons, IDXEmbed).
+
+contentlayer or mdx for Blog (seed with examples).
+
+lib/cms.ts (headless CMS adapter—start with filesystem JSON, mock functions).
+
+lib/seo.ts, lib/idx.ts (IDX embed helpers), lib/analytics.ts.
+
+Brand palette (from logo):
+
+--atlante-gold:#C8A44D; --atlante-deep:#8A6B21; --charcoal:#232323; --ivory:#F8F8F6; --white:#FFFFFF;
+
+Tailwind theme: primary=atlante-gold, secondary=atlante-deep, foreground=charcoal, muted=ivory.
+
+Include accessible button/hover states and gold gradient utility (from-[#D8B55A] to-[#8A6B21]).
+
+Typography: Inter (body), Playfair Display (headlines). Generous white space, subtle shadows, rounded-2xl cards.
+
+Global features
+
+Sticky header with mega-menu; footer with legal, contact, social, email signup.
+
+Blog (MDX) with categories: Market Insights, Company News, Community.
+
+Lead capture: universal “Request a Tour” & “Contact an Agent” CTAs → /api/lead → environment var CRM_WEBHOOK_URL.
+
+Email signup component wired to Mailchimp/Constant Contact via env vars.
+
+Analytics & SEO: GA4 (NEXT_PUBLIC_GA_ID), Search Console meta, next-sitemap, OpenGraph images, 301/302 redirects.
+
+Pages & sections
+
+Home /
+
+Hero with gold globe/skyline mark, search CTA (“Find Properties”) that links to Broker IDX search.
+
+Four service cards: Brokerage, Real Estate School, Development Consulting, Property Management.
+
+Featured Listings carousel (IDX showcase embed placeholder).
+
+“Why Atlante” (value props), Testimonials, Partners, Blog strip, Donate/Sponsor callout.
+
+Brokerage /brokerage (full featured)
+
+Sub-hero with quick filters.
+
+IDXBroker embeds: search form, map results, featured listings (create placeholder components IDXSearch, IDXShowcase, IDXMapResults that accept data-idx-* attributes and a <script> loader slot).
+
+Agent grid linking to agent profiles.
+
+LeadForm with “Request a Tour”.
+
+Agents /agents & Agent detail /agents/[slug]
+
+Bio, specialties, license, service area map, contact form (agent-id hidden field), personal Calendly link, their listings (IDX widget).
+
+Real Estate School /school (link-out)
+
+Short overview (mission & who we serve), “View Classes & Register” button (external URL).
+
+Optional events/calendar embed placeholder.
+
+Development Consulting /development
+
+Services overview (feasibility, site acquisition, entitlements, financing support).
+
+Project portfolio grid → Project detail /development/projects/[slug] with gallery, metrics, community impact, testimonial.
+
+“Book a Consultation” (Calendly embed) + Discovery form.
+
+Property Management /property-management (link-out)
+
+Service explainer + Owner Login and Tenant Login buttons (external URLs).
+
+Donations & Sponsorships /donate /sponsorships
+
+Stripe/Donorbox embed placeholders; sponsor tiers grid; impact copy.
+
+Blog /blog & Post /blog/[slug] (MDX, TOC, share buttons).
+
+Contact /contact, Book /book (Calendly), Legal (Privacy/Terms).
+
+IDXBroker integration (placeholders)
+
+Create a dedicated IDXEmbed component that:
+
+Accepts embedType and a scriptSrc string.
+
+Renders a <div id="idx-container"> plus <Script src={scriptSrc} strategy="afterInteractive" />.
+
+Provide examples and comments showing where to paste IDXBroker Showcase, Search, Map, and Wrapper Page code.
+
+Global “Search” and “Featured Listings” sections should consume these components.
+
+CMS
+
+Default: file-based JSON in /data with TypeScript types for Agents, Projects, Services, Testimonials, Sponsors, Posts.
+
+Provide adapter functions in lib/cms.ts to later swap to Sanity/Strapi/WordPress headless without code churn.
+
+Forms
+
+LeadForm (name, email, phone, message, property interest, source, consent)
+
+ConsultationForm (service interest, timeline, budget)
+
+Validate with Zod; POST to /api/lead → forward to CRM_WEBHOOK_URL (HubSpot/Pipedrive/etc.).
+
+Performance & a11y
+
+Image optimization, next/font, Lighthouse 90+ targets, semantic HTML/ARIA labels.
+
+Deliverables in this template
+
+Full page/route structure, components with sample content, env var stubs, Tailwind theme with Atlante palette, sitemap generator, robots.txt, and README.md with integration instructions (IDX, CMS swap, GA4, Mailchimp, Calendly, Stripe/Donorbox).
