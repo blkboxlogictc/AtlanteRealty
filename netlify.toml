@@ -1,0 +1,28 @@
+[build]
+  command = "npm run build"
+  functions = "netlify/functions"
+  publish = "dist/public"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[[redirects]]
+  from = "/api/properties/featured"
+  to = "/.netlify/functions/properties-featured"
+  status = 200
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[dev]
+  command = "npm run dev"
+  port = 5000
+  publish = "dist/public"
+  functions = "netlify/functions"

@@ -4,7 +4,13 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import BlogCard from "@/components/cards/BlogCard";
 import { Input } from "@/components/ui/input";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Search } from "lucide-react";
 import type { BlogPost } from "@shared/schema";
@@ -13,36 +19,48 @@ export default function Blog() {
   const [searchQuery, setSearchQuery] = useState("");
   const [category, setCategory] = useState("");
 
-  const { data: posts, isLoading, error } = useQuery<BlogPost[]>({
+  const {
+    data: posts,
+    isLoading,
+    error,
+  } = useQuery<BlogPost[]>({
     queryKey: ["/api/blog"],
   });
 
-  const filteredPosts = posts?.filter(post => {
-    if (searchQuery) {
-      const query = searchQuery.toLowerCase();
-      if (!post.title.toLowerCase().includes(query) &&
+  const filteredPosts =
+    posts?.filter((post) => {
+      if (searchQuery) {
+        const query = searchQuery.toLowerCase();
+        if (
+          !post.title.toLowerCase().includes(query) &&
           !post.excerpt?.toLowerCase().includes(query) &&
-          !post.content.toLowerCase().includes(query)) {
+          !post.content.toLowerCase().includes(query)
+        ) {
+          return false;
+        }
+      }
+
+      if (category && category !== "all" && post.category !== category) {
         return false;
       }
-    }
-    
-    if (category && post.category !== category) {
-      return false;
-    }
-    
-    return true;
-  }) || [];
 
-  const categories = Array.from(new Set(posts?.map(post => post.category) || []));
+      return true;
+    }) || [];
 
-  const featuredPost = filteredPosts.find(post => post.isPublished) || filteredPosts[0];
-  const otherPosts = filteredPosts.filter(post => post.id !== featuredPost?.id);
+  const categories = Array.from(
+    new Set(posts?.map((post) => post.category) || [])
+  );
+
+  const featuredPost =
+    filteredPosts.find((post) => post.isPublished) || filteredPosts[0];
+  const otherPosts = filteredPosts.filter(
+    (post) => post.id !== featuredPost?.id
+  );
 
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
+
       <main>
         {/* Hero Section */}
         <section className="py-20 bg-card">
@@ -52,10 +70,11 @@ export default function Blog() {
                 Real Estate Insights & News
               </h1>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Stay informed with the latest market trends, industry news, and expert insights from our team of real estate professionals.
+                Stay informed with the latest market trends, industry news, and
+                expert insights from our team of real estate professionals.
               </p>
             </div>
-            
+
             {/* Search and Filter */}
             <div className="max-w-2xl mx-auto grid md:grid-cols-2 gap-4">
               <div className="relative">
@@ -68,13 +87,16 @@ export default function Blog() {
                   data-testid="input-blog-search"
                 />
               </div>
-              
-              <Select onValueChange={setCategory} data-testid="select-blog-category">
+
+              <Select
+                onValueChange={setCategory}
+                data-testid="select-blog-category"
+              >
                 <SelectTrigger>
                   <SelectValue placeholder="All Categories" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="">All Categories</SelectItem>
+                  <SelectItem value="all">All Categories</SelectItem>
                   {categories.map((cat) => (
                     <SelectItem key={cat} value={cat}>
                       {cat}
@@ -90,7 +112,9 @@ export default function Blog() {
         {featuredPost && (
           <section className="py-12 bg-background">
             <div className="container mx-auto px-4">
-              <h2 className="text-2xl font-bold text-foreground mb-8">Featured Article</h2>
+              <h2 className="text-2xl font-bold text-foreground mb-8">
+                Featured Article
+              </h2>
               <div className="max-w-4xl">
                 <BlogCard post={featuredPost} />
               </div>
@@ -103,7 +127,9 @@ export default function Blog() {
           <div className="container mx-auto px-4">
             {error ? (
               <div className="text-center py-12">
-                <p className="text-destructive">Failed to load blog posts. Please try again later.</p>
+                <p className="text-destructive">
+                  Failed to load blog posts. Please try again later.
+                </p>
               </div>
             ) : isLoading ? (
               <>
@@ -126,13 +152,14 @@ export default function Blog() {
               <>
                 <div className="flex justify-between items-center mb-8">
                   <h2 className="text-2xl font-bold text-foreground">
-                    {featuredPost ? 'More Articles' : 'Latest Articles'}
+                    {featuredPost ? "More Articles" : "Latest Articles"}
                   </h2>
                   <div className="text-sm text-muted-foreground">
-                    {filteredPosts.length} article{filteredPosts.length !== 1 ? 's' : ''} found
+                    {filteredPosts.length} article
+                    {filteredPosts.length !== 1 ? "s" : ""} found
                   </div>
                 </div>
-                
+
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {otherPosts.map((post) => (
                     <BlogCard key={post.id} post={post} />
@@ -142,9 +169,12 @@ export default function Blog() {
             ) : (
               <div className="text-center py-12">
                 <Search className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-foreground mb-2">No articles found</h3>
+                <h3 className="text-lg font-semibold text-foreground mb-2">
+                  No articles found
+                </h3>
                 <p className="text-muted-foreground">
-                  Try adjusting your search criteria or check back later for new content.
+                  Try adjusting your search criteria or check back later for new
+                  content.
                 </p>
               </div>
             )}
@@ -158,17 +188,21 @@ export default function Blog() {
               Stay Updated
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Subscribe to our newsletter to receive the latest real estate insights, market updates, and company news directly in your inbox.
+              Subscribe to our newsletter to receive the latest real estate
+              insights, market updates, and company news directly in your inbox.
             </p>
             <a href="#newsletter" className="inline-block">
-              <button className="px-8 py-3 gradient-gold text-white rounded-xl font-medium hover:opacity-90 transition-opacity" data-testid="button-subscribe-newsletter">
+              <button
+                className="px-8 py-3 gradient-gold text-white rounded-xl font-medium hover:opacity-90 transition-opacity"
+                data-testid="button-subscribe-newsletter"
+              >
                 Subscribe to Newsletter
               </button>
             </a>
           </div>
         </section>
       </main>
-      
+
       <Footer />
     </div>
   );
